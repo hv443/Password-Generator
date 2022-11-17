@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script defer src="https://kit.fontawesome.com/22ee28c8bc.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <main class="bg-dark min-h-screen space-y-5 grid place-content-center">
+
+        <h1 class="text-center w-full text-off text-lg">Paasword Generator</h1>
+
+        <div class="w-full min-w-[320px] text-secondary">
+
+            <!-- ! password display -->
+
+            <section class="flex items-center justify-between p-4 bg-primary rounded-sm">
+                <input type="text" id="password-output" class="bg-transparent" placeholder="PASS" disabled>
+                <button id="copy-password" class="relative">
+                    <i class="fa-regular fa-copy text-active hover:text-secondary"></i>
+                    <p class="absolute text-primary text-xs bg-active -top-full left-0 rounded-lg p-1 font-semibold opacity-0 pointer-events-none translate-y-1/2 duration-300"
+                        id="pop-up">
+                        Copied</p>
+                </button>
+            </section>
+
+            <!-- ! form for ganerating password -->
+
+            <section class="p-4 bg-primary mt-5 rounded-sm space-y-5">
+
+                <form action="#" class="space-y-2">
+
+                    <div class="flex items-center justify-between">
+                        <span>Character Length</span>
+                        <span class="text-active font-bold" id="pass-length">10</span>
+                    </div>
+
+                    <input class="w-full cursor-pointer accent-active" id="pass-length-btn" min="4" max="16"
+                        type="range">
+
+                    <div class="flex items-center gap-3 ">
+                        <div class="relative w-fit h-fit">
+                            <input class="opacity-0 cursor-pointer peer" type="checkbox" name="uppercase" id="uppercase"
+                                checked>
+                            <div
+                                class="absolute border border-white w-full top-2 left-0 aspect-square pointer-events-none peer-checked:bg-active peer-checked:border-active overflow-hidden grid place-content-center">
+                                <i class="fa-sharp fa-solid fa-check scale-75 aspect-square text-primary"></i>
+                            </div>
+                        </div>
+                        <label for="uppercase" class="cursor-pointer">Include Uppercse Letters</label>
+                    </div>
+
+                    <div class="flex items-center gap-3 ">
+                        <div class="relative w-fit h-fit">
+                            <input class="opacity-0 cursor-pointer peer" type="checkbox" name="lowercase" id="lowercase"
+                                checked>
+                            <div
+                                class="absolute border border-white w-full top-2 left-0 aspect-square pointer-events-none peer-checked:bg-active peer-checked:border-active overflow-hidden grid place-content-center">
+                                <i class="fa-sharp fa-solid fa-check text-primary scale-75 aspect-square"></i>
+                            </div>
+                        </div>
+                        <label for="lowercase" class="cursor-pointer">Include Lowercase Letters</label>
+                    </div>
+
+                    <div class="flex items-center gap-3 ">
+                        <div class="relative w-fit h-fit">
+                            <input class="opacity-0 cursor-pointer peer" type="checkbox" name="number" id="number">
+                            <div
+                                class="absolute border border-white w-full top-2 left-0 aspect-square pointer-events-none peer-checked:bg-active peer-checked:border-active overflow-hidden grid place-content-center">
+                                <i class="fa-sharp fa-solid fa-check text-primary scale-75 aspect-square"></i>
+                            </div>
+                        </div>
+                        <label for="number" class="cursor-pointer">Include Numbers </label>
+                    </div>
+
+                    <div class="flex items-center gap-3 ">
+                        <div class="relative w-fit h-fit">
+                            <input class="opacity-0 cursor-pointer peer" type="checkbox" name="symbol" id="symbol">
+                            <div
+                                class="absolute border border-white w-full top-2 left-0 aspect-square pointer-events-none peer-checked:bg-active peer-checked:border-active overflow-hidden grid place-content-center">
+                                <i class="fa-sharp fa-solid fa-check text-primary scale-75 aspect-square"></i>
+                            </div>
+                        </div>
+                        <label for="symbol" class="cursor-pointer">Include Symbols </label>
+                    </div>
+                </form>
+
+                <!-- ! password strenght -->
+
+                <div class="bg-dark p-3 rounded-sm flex justify-between items-center">
+                    <p class="text-off text-sm font-semibold">STRENGTH</>
+                    <div class="flex items-center space-x-1">
+                        <p id="pass-strength-text" class="text-base font-semibold">
+                        </p>
+                        <div id="strength-bar" class="flex items-center space-x-1">
+                            <p class="h-5 w-2 border border-secondary"></p>
+                            <p class="h-5 w-2 border border-secondary"></p>
+                            <p class="h-5 w-2 border border-secondary"></p>
+                            <p class="h-5 w-2 border border-secondary"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <button id="generate-password" class=" w-full p-3 bg-active text-dark font-semibold text-sm space-x-2 border border-active
+                        lg:hover:bg-transparent lg:hover:text-secondary active:bg-transparent active:text-secondary
+                        active:scale-95 duration-300">
+                        <span>GENERATE</span>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+</body>
+
+</html>
