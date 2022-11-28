@@ -11,28 +11,28 @@
     <title>Password Generator</title>
 </head>
 
-<body>
-    <main class="bg-dark min-h-screen space-y-5 grid place-content-center">
+<body class="bg-dark px-5">
+    <main class=" min-h-screen flex flex-col justify-center space-y-5 max-w-sm mx-auto">
 
-        <h1 class="text-center w-full text-off text-lg">Paasword Generator</h1>
+        <h1 class="text-center text-off text-lg">Paasword Generator</h1>
 
-        <div class="w-full min-w-[320px] text-secondary">
+        <div class="text-secondary">
 
             <!-- ! password display -->
 
-            <section class="flex items-center justify-between p-4 bg-primary rounded-sm">
-                <input type="text" id="password-output" class="bg-transparent" placeholder="PASS" disabled>
+            <div class="flex justify-between p-4 bg-primary rounded-sm">
+                <input type="text" id="password-output" class="bg-transparent w-auto" placeholder="PASSWORD" disabled>
                 <button id="copy-password" class="relative">
                     <i class="fa-regular fa-copy text-active hover:text-secondary"></i>
                     <p class="absolute text-primary text-xs bg-active -top-full left-0 rounded-lg p-1 font-semibold opacity-0 pointer-events-none translate-y-1/2 duration-300"
                         id="pop-up">
                         Copied</p>
                 </button>
-            </section>
+            </div>
 
             <!-- ! form for ganerating password -->
 
-            <section class="p-4 bg-primary mt-5 rounded-sm space-y-5">
+            <div class="p-4 bg-primary mt-5 rounded-sm space-y-5">
 
                 <form action="#" class="space-y-2">
 
@@ -117,7 +117,7 @@
                     </button>
                 </div>
 
-            </section>
+            </div>
 
         </div>
 
